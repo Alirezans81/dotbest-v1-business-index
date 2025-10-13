@@ -7,6 +7,52 @@
   src: url("../fonts/Yekan.ttf");
 }
 
+@font-face {
+  font-family: Yaro;
+  src: url("../fonts/Yaro.ttf");
+}
+
 * {
   font-family: Yekan;
+  direction: rtl;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100dvw;
+  height: 100dvh;
+  font-size: 1.5rem;
+  overflow: hidden;
+}
+
+* {
+  --sb-track-color: transparent;
+  --sb-thumb-color: #737373;
+  --sb-size: 2px;
+}
+
+*::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 20px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 20px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  * {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+
+.font-eng {
+  font-family: Yaro !important;
+  font-weight: 300 !important;
+  letter-spacing: 0.1rem !important;
 }

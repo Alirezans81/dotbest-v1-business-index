@@ -28,6 +28,7 @@ export default {
         float: "float 6s ease-in-out infinite",
         fadeIn: "fadeIn 1s ease-out",
         upward: "upward 2s ease-out 1",
+        downward: "downward 2s ease-out 1",
         rightward: "rightward 2s ease-out 1",
         leftward: "leftward 2s ease-out 1",
         appear: "appear .5s ease-out 1",
@@ -43,6 +44,10 @@ export default {
         },
         upward: {
           "0%": { margin: "30px 0px 0px 0px" },
+          "100%": { margin: "0px" },
+        },
+        downward: {
+          "0%": { margin: "0px 0px 30px 0px" },
           "100%": { margin: "0px" },
         },
         rightward: {
