@@ -3,8 +3,9 @@
 import { useSubmitForm } from "@/apis/Form/hooks";
 import { type Form } from "@/lib/types";
 import { Field, Formik } from "formik";
+import { useEffect, useState } from "react";
 
-export default function Form() {
+function FormChildComponent() {
   const { submit } = useSubmitForm();
 
   const vlidateSalonName = (value: string) => {
@@ -114,4 +115,18 @@ export default function Form() {
       </Formik>
     </div>
   );
+}
+
+export default function Form() {
+  const [showChild, setShowChild] = useState(false);
+
+  useEffect(() => {
+    setShowChild(true);
+  }, []);
+
+  if (!showChild) {
+    return null;
+  }
+
+  return <FormChildComponent />;
 }
